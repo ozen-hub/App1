@@ -1,4 +1,6 @@
 <button routerLink="/main" class="btn-access" routerLinkActive="active">Main Page</button> | 
-<button  class="btn-access" routerLink="/user" routerLinkActive="active">User Details</button>
+<button  class="btn-access" routerLink="/user/{{text}}" routerLinkActive="active">User Details</button>
+<br>
+<input type="text" [(ngModel)]="text">
 <hr>
 <router-outlet></router-outlet>
