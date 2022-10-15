@@ -27,8 +27,9 @@
       *ngIf="userForm.get('password')?.invalid && userForm.get('password')?.touched"
       >please enter valid password</p>
     </div> -->
+    <button [disabled]="userForm.invalid" type="submit" mat-raised-button color="primary">Submit Data</button>
 
-    <button [disabled]="userForm.invalid" type="submit" class="btn btn-primary">Submit Data</button>
+    <!-- <button [disabled]="userForm.invalid" type="submit" class="btn btn-primary">Submit Data</button> -->
   </div>
 </div>
 </form>
