@@ -11,13 +11,19 @@ import { MatButtonModule } from "@angular/material/button";
 import { MainPageComponent } from './componets/main-page/main-page.component';
 import { UserDetailsComponent } from './componets/user-details/user-details.component';
 import { NotFoundComponent } from './componets/not-found/not-found.component';
+import { ParentComponent } from './componets/parent/parent.component';
+import { Child1Component } from './componets/parent/child/child1/child1.component';
+import { Child2Component } from './componets/parent/child/child2/child2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
     UserDetailsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ParentComponent,
+    Child1Component,
+    Child2Component
   ],
   imports: [
     BrowserModule,
