@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +9,9 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class AppComponent {
   
 userForm= new FormGroup({
-  username: new FormControl(null),
-  password: new FormControl(null)
+  username: new FormControl(null,
+     [Validators.required, Validators.minLength(3), Validators.maxLength(6)]),
+  password: new FormControl(null, Validators.required)
 });
 
 public submitData(){

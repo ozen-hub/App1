@@ -1,17 +1,25 @@
-<form [formGroup]="userForm">
+<form [formGroup]="userForm" (ngSubmit)="submitData()">
 <div class="main-outer">
   <div class="inner">
 
     <div class="mb-3">
       <label for="username" class="form-label">User Name</label>
       <input formControlName="username" type="text" class="form-control" id="username" placeholder="cmjd">
+      <p class="alert alert-danger" style="margin-top: 3px;"
+      *ngIf="userForm.get('username')?.invalid && userForm.get('username')?.touched"
+      >please enter valid username</p>
     </div>
+    
 
     <div class="mb-3">
       <label for="password" class="form-label">Password</label>
       <input formControlName="password" type="password" class="form-control" id="password">
+      <p class="alert alert-danger" style="margin-top: 3px;"
+      *ngIf="userForm.get('password')?.invalid && userForm.get('password')?.touched"
+      >please enter valid password</p>
     </div>
-    <button (click)="submitData()" type="button" class="btn btn-primary">Submit Data</button>
+
+    <button type="submit" class="btn btn-primary">Submit Data</button>
   </div>
 </div>
 </form>
