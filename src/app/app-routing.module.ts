@@ -16,6 +16,8 @@ const routes: Routes = [
     {path:'child1', component:Child1Component},
     {path:'child2', component:Child2Component}
   ]},
+  { path: 'customer', loadChildren: () => import('./modules/customer/customer.module').then(m => m.CustomerModule) },
+  { path: 'Item', loadChildren: () => import('./modules/item/item.module').then(m => m.ItemModule) },
   {path:'**', component:NotFoundComponent}
 ];
 
