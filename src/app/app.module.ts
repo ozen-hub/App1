@@ -10,12 +10,14 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatButtonModule } from "@angular/material/button";
 import { MainPageComponent } from './componets/main-page/main-page.component';
 import { UserDetailsComponent } from './componets/user-details/user-details.component';
+import { NotFoundComponent } from './componets/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
