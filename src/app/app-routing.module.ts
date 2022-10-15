@@ -12,6 +12,7 @@ const routes: Routes = [
   {path:'main', component:MainPageComponent},
   {path:'user/:name',component:UserDetailsComponent},
   {path:'parent', component: ParentComponent, children:[
+    {path:'', redirectTo:'/parent/child1', pathMatch:'full'},
     {path:'child1', component:Child1Component},
     {path:'child2', component:Child2Component}
   ]},
