@@ -15,6 +15,12 @@ userForm= new FormGroup({
 
 public submitData(){
   console.log(this.userForm);
+  let obj={
+      user:this.userForm.get('username')?.value,
+      password:this.userForm.get('password')?.value
+  };
+  console.log(obj);
+  
 }
 
 
